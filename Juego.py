@@ -2,6 +2,7 @@ from PyQt4 import QtGui, uic
 from sys import argv
 from random import randint, choice
 
+__author__ = 'figarrido'
 
 # uic.loadUiType entrega una lista con dos elementos
 # [Ui_MainWindow, PyQt4.QtGui.QMainWindow]
@@ -43,7 +44,6 @@ class Juego(form_classes[0], form_classes[1]):
         # botón Nuevo Juego
         self.siguiente = True
 
-    # BONUS #######
     def rbtn_cambiar_dificultad(self):
         global DIFICULTAD
         for nivel in NIVELES:
@@ -59,18 +59,15 @@ class Juego(form_classes[0], form_classes[1]):
         self.label_buenos.setText('0')
         self.label_malos.setText('0')
         self.btn_newGame_clicked()
-    ###############
 
     def btn_newGame_clicked(self):
         self.siguiente = True
         self.feedback.setText('')
         self.ledit_result.setText('')
 
-        # Bonus #########
         if self.rbtn_random.isChecked():
             oper = choice(OPERACIONES)
             self.label_op.setText(oper[1])
-        #################
         else:
             for oper in OPERACIONES:
                 if getattr(self, 'rbtn_' + oper[0]).isChecked():
