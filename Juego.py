@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 from PyQt4 import QtGui, uic
+from PyQt4.QtCore import QString
 from sys import argv
 from random import randint, choice
 
@@ -103,13 +105,13 @@ class Juego(form_classes[0], form_classes[1]):
 
         # Verificar que ingresa algo
         if not entrada:
-            self.feedback.setText('Debe ingresar un número.')
+            self.feedback.setText(u'Debe ingresar un número.')
             return
 
         # Verificar que se ingresan números
         for digito in entrada:
-            if not entrada.isdigit():
-                self.feedback.setText('El resultado debe ser un número.')
+            if not str(entrada).isdigit():
+                self.feedback.setText(u'El resultado debe ser un número.')
                 return
 
         # Se aumenta el número de juegos
@@ -127,13 +129,13 @@ class Juego(form_classes[0], form_classes[1]):
 
         # Se verifica si el usuario respondió bien o mal
         if resultado == int(entrada):
-            self.feedback.setText('Está correcto!')
+            self.feedback.setText(u'Está correcto!')
             actual_buenos = int(self.label_buenos.text())
             self.label_buenos.setText(str(actual_buenos + 1))
 
         else:
             self.feedback.setText(
-                'No está correcto.\nLa respuesta correcta es {}.'.format(
+                u'No está correcto.\nLa respuesta correcta es {}.'.format(
                     resultado))
             actual_malos = int(self.label_malos.text())
             self.label_malos.setText(str(actual_malos + 1))

@@ -2,61 +2,11 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>400</width>
-    <height>410</height>
-   </rect>
-  </property>
   <property name="windowTitle">
    <string>Juegos Matemático</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0" colspan="2">
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Dificultad</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QRadioButton" name="rbtn_facil">
-          <property name="text">
-           <string>Fácil</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="rbtn_medio">
-          <property name="text">
-           <string>Medio</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="rbtn_dificil">
-          <property name="text">
-           <string>Díficil</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
     <item row="1" column="0" colspan="2">
      <widget class="Line" name="line">
       <property name="orientation">
@@ -66,60 +16,6 @@
     </item>
     <item row="2" column="0" colspan="2">
      <layout class="QGridLayout" name="gridLayout">
-      <item row="4" column="0">
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QRadioButton" name="rbtn_random">
-          <property name="text">
-           <string>Aleatorio</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="rbtn_suma">
-          <property name="accessibleName">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Suma</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="rbtn_resta">
-          <property name="accessibleName">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Resta</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="rbtn_mult">
-          <property name="accessibleName">
-           <string/>
-          </property>
-          <property name="text">
-           <string>Multiplicación</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="rbtn_div">
-          <property name="accessibleName">
-           <string/>
-          </property>
-          <property name="text">
-           <string>División</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
       <item row="4" column="1">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
@@ -245,6 +141,60 @@
         </property>
        </spacer>
       </item>
+      <item row="4" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QRadioButton" name="rbtn_random">
+          <property name="text">
+           <string>Aleatorio</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbtn_suma">
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Suma</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbtn_resta">
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Resta</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbtn_mult">
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Multiplicación</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbtn_div">
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="text">
+           <string>División</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
     <item row="3" column="0" rowspan="2" colspan="2">
@@ -333,6 +283,63 @@
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Dificultad</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QWidget" name="">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>0</y>
+           <width>217</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QRadioButton" name="rbtn_facil">
+            <property name="text">
+             <string>Fácil</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rbtn_medio">
+            <property name="text">
+             <string>Medio</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rbtn_dificil">
+            <property name="text">
+             <string>Díficil</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </item>
      </layout>
